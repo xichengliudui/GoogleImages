@@ -1,6 +1,4 @@
 FROM centos:7
-ENV PARAMS=""
-ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN yum -y install wget
 RUN yum -y install java

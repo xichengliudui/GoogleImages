@@ -14,10 +14,3 @@ RUN yum -y install make gcc-c++
 
 RUN curl --silent --location https://rpm.nodesource.com/setup_8.x | bash -
 RUN yum -y install nodejs
-
-RUN curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/microsoft.repo 
-RUN yum -y install powershell
-RUN wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0-alpha.9/powershell-6.0.0_alpha.9-1.el7.centos.x86_64.rpm
-RUN yum install -y libunwind libicu
-RUN yum -y remove powershell
-RUN rpm -ivh powershell-6.0.0_alpha.9-1.el7.centos.x86_64.rpm
